@@ -1,4 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:muhmad_omar_haj_hamdo/pages/home_page.dart';
+
+import 'models/course.dart';
+
+final List<Course> courses = [
+  Course("First Course", "First Student", 20, 11.1),
+  Course("Second Course", "Second Student", 20, 11.1),
+  Course("Third Course", "Third Student", 20, 11.1),
+  Course("Fourth Course", "Fourth Student", 20, 11.1),
+  Course("Fifth Course", "Fifth Student", 20, 11.1),
+  Course("Sixth Course", "Sixth Student", 20, 11.1),
+  Course("Seventh Course", "Seventh Student", 20, 11.1),
+  Course("Eighth Course", "Eighth Student", 20, 11.1),
+  Course("Ninth Course", "Ninth Student", 20, 11.1),
+];
 
 void main() {
   runApp(const MyApp());
@@ -10,60 +25,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Muhmad Omar Haj Hamdo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      home: const HomePage(),
     );
   }
 }
