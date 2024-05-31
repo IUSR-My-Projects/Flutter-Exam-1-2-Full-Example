@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:muhmad_omar_haj_hamdo/widgets/icon_widget.dart';
 import 'package:muhmad_omar_haj_hamdo/widgets/search_widget.dart';
 
+import '../models/product.dart';
 import '../widgets/buttom_navigation_widget.dart';
 import '../widgets/course_widget.dart';
+import '../widgets/product_item.dart';
+
+final products = [
+  Product(icon: Icons.ac_unit, title: "Flutter", videos: "50 videos"),
+  Product(icon: Icons.dark_mode, title: "Dart", videos: "60 videos"),
+  Product(icon: Icons.coffee, title: "Flutter", videos: "50 videos"),
+  Product(icon: Icons.access_alarm, title: "Dart", videos: "60 videos"),
+  Product(icon: Icons.account_balance, title: "Flutter", videos: "50 videos"),
+  Product(icon: Icons.work_history, title: "Dart", videos: "60 videos"),
+];
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -46,7 +57,6 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-
           SizedBox(height: 20),
 
           CourseWidget(),
