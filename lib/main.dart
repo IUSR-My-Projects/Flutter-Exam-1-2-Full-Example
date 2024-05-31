@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:muhmad_omar_haj_hamdo/pages/home_page.dart';
-
 import 'models/course.dart';
 
 final List<Course> courses = [

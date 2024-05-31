@@ -30,11 +30,11 @@ class CourseWidget extends StatelessWidget {
           mainAxisSpacing: 20,
         ),
         itemBuilder: (context, index) {
-          final course = products[index];
+          final product = products[index];
           return ProductItem(
-            icon: course.icon,
-            title: course.title,
-            videos: course.videos,
+            icon: product.icon,
+            title: product.title,
+            videos: product.videos,
           );
         },
       ),

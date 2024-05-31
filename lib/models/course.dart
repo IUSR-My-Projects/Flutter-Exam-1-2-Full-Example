@@ -8,9 +8,9 @@ class Course {
 
   static List<Course> courses = [];
 
-  // Get  Course Name by Top Price Course
+  // Get Course Name by Top Price Course
   static String getTopPriceCourseName() {
-    courses.sort((a, b) => b.price.compareTo(a.price));
+    courses.sort((a, b) => b.price.compareTo(a.price)); // 3 2 1
     return courses.first.course_name;
   }
 }
